@@ -1,3 +1,11 @@
+/*
+ * @Author: aze
+ * @Date: 2021-10-23 10:40:14
+ * @LastEditors: aze
+ * @LastEditTime: 2021-10-27 17:40:25
+ * @Description: 
+ * @FilePath: \all-koa2\src\router\goods.route.js
+ */
 const Router = require('koa-router')
 
 const { auth, hadAdminPermission } = require('../middleware/auth.middleware')
@@ -24,7 +32,7 @@ router.post('/', auth, hadAdminPermission, validator, create)
 router.put('/:id', auth, hadAdminPermission, validator, update)
 
 // 硬删除接口
-// router.delete('/:id', auth, hadAdminPermission, remove)
+router.delete('/:id', auth, hadAdminPermission, remove)
 
 router.post('/:id/off', auth, hadAdminPermission, remove)
 router.post('/:id/on', auth, hadAdminPermission, restore)

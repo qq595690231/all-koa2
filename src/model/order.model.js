@@ -1,3 +1,11 @@
+/*
+ * @Author: aze
+ * @Date: 2021-10-23 10:40:13
+ * @LastEditors: aze
+ * @LastEditTime: 2021-10-26 16:56:28
+ * @Description: 
+ * @FilePath: \all-koa2\src\model\order.model.js
+ */
 const { DataTypes } = require('sequelize')
 const seq = require('../db/seq')
 

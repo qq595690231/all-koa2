@@ -1,3 +1,11 @@
+/*
+ * @Author: aze
+ * @Date: 2021-10-23 10:40:13
+ * @LastEditors: aze
+ * @LastEditTime: 2021-10-26 16:51:33
+ * @Description: 
+ * @FilePath: \all-koa2\src\model\addr.model.js
+ */
 // 1. 导入seq的连接
 const { DataTypes } = require('sequelize')
 const seq = require('../db/seq')
@@ -11,6 +19,7 @@ const Address = seq.define('zd_addresses', {
   },
   consignee: {
     type: DataTypes.STRING,
+    // unique: true,
     allowNull: false,
     comment: '收货人姓名',
   },
